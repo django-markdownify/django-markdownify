@@ -12,7 +12,7 @@ requires-python=">=3.7"
 dependencies = [
 	"Django",
 	"markdown",
-	"bleach[css] >= 6.0.0",
+	"justhtml >= 3.11.3",
 ]
 classifiers=[
 	"Environment :: Web Environment",

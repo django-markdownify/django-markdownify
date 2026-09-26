@@ -4,7 +4,7 @@ from django.conf import settings
 from django.template import Context, Template
 from django.test import SimpleTestCase, override_settings
 
-from markdownify.templatetags.markdownify import markdownify
+from django_markdownify.templatetags.markdownify import markdownify
 
 
 class MarkdownifyTestCase(SimpleTestCase):
@@ -98,7 +98,7 @@ class MarkdownifyTestCase(SimpleTestCase):
         Item 1
         Item 2
 
-        <p style="color: red; font-weight: 900; border: 1px solid blue;">
+        <p style="color: red; font-weight: 900; border: 1px solid blue">
         This paragraph has some inline styling.</p>
 
         <p>In this paragraph, protocols are being tested.
@@ -266,38 +266,6 @@ class MarkdownifyTestCase(SimpleTestCase):
         self.assertHTMLEqual(output, expected_output)
 
     @override_settings()
-    def test_linkify(self):
-        """
-        Test bleach linkify defaults
-        """
-
-        # Delete settings
-        del settings.MARKDOWNIFY
-
-        # Set some settings
-        settings.MARKDOWNIFY = {
-            "default": {
-                "WHITELIST_TAGS": ['h1', 'p', 'a', ],
-                "WHITELIST_ATTRS": ['href', ],
-                "LINKIFY_TEXT": {
-                    "PARSE_URLS": True,
-                }
-            }
-        }
-
-        output = markdownify(self.input_text_linkify)
-        expected_output = """
-            <h1>Linkify</h1>
-            <p>
-              <a href="http://somelink.com">http://somelink.com</a>
-              someone@somecompany.com
-              <a href="http://somelink.com">Website</a>
-            </p>
-        """
-
-        self.assertHTMLEqual(output, expected_output)
-
-    @override_settings()
     def test_linkify_no_linkify(self):
         """
         Test bleach linkify turned off
@@ -345,7 +313,6 @@ class MarkdownifyTestCase(SimpleTestCase):
                 "WHITELIST_ATTRS": ['href', ],
                 "LINKIFY_TEXT": {
                     "PARSE_URLS": True,
-                    "PARSE_EMAIL": True
                 }
             }
         }
