@@ -1,8 +1,7 @@
 from django.conf import settings
-from django.core.checks import Warning, register
+from django.core.checks import Warning
 
 
-@register()
 def settings_check(app_configs, **kwargs):
 
     setting_keys = [
