@@ -2,10 +2,8 @@ Tests
 =====
 
 Django Markdownify comes with tests to check if settings and defaults produce the expected output.
-To run the tests, make sure Django Markdownify is :ref:`installed <install>`. Then go to your project where
-Django Markdownify is installed, and run the tests.
+Run the tests with `tox <https://tox.wiki/en/latest/how-to/install.html>`_:
 
-  .. highlight:: bash
+  .. code-block:: bash
 
-  >>> cd /path/to/your/project
-  >>> python manage.py test markdownify
+    $ tox
