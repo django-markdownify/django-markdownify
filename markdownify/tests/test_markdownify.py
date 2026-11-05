@@ -1,4 +1,4 @@
-import os
+from pathlib import Path
 
 from django.conf import settings
 from django.template import Context, Template
@@ -12,14 +12,13 @@ class MarkdownifyTestCase(SimpleTestCase):
 
     @override_settings()
     def setUp(self):
-
-        # Read in texts
-        self.input_text_default = open(os.path.join(os.path.dirname(__file__), 'input_text_default.md')).read()
-        self.input_text_extensions = open(os.path.join(os.path.dirname(__file__), 'input_text_extensions.md')).read()
-        self.input_text_bleach = open(os.path.join(os.path.dirname(__file__), 'input_text_bleach.md')).read()
-        self.input_text_strip = open(os.path.join(os.path.dirname(__file__), 'input_text_strip.md')).read()
-        self.input_text_linkify = open(os.path.join(os.path.dirname(__file__), 'input_text_linkify.md')).read()
-        self.input_text_alternative = open(os.path.join(os.path.dirname(__file__), 'input_text_alternative.md')).read()
+        test_dir = Path(__file__).parent
+        self.input_text_default = (test_dir / 'input_text_default.md').read_text()
+        self.input_text_extensions = (test_dir / 'input_text_extensions.md').read_text()
+        self.input_text_bleach = (test_dir/ 'input_text_bleach.md').read_text()
+        self.input_text_strip = (test_dir/ 'input_text_strip.md').read_text()
+        self.input_text_linkify = (test_dir/ 'input_text_linkify.md').read_text()
+        self.input_text_alternative = (test_dir/ 'input_text_alternative.md').read_text()
 
     @override_settings()
     def test_default_settings(self):
