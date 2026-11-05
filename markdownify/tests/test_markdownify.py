@@ -31,17 +31,17 @@ class MarkdownifyTestCase(SimpleTestCase):
 
         output = markdownify(self.input_text_default)
         expected_output = """
-        <a href="http://somelink.com" title="somelink">This</a> is <strong>not</strong> a real link. 
+        <a href="http://somelink.com" title="somelink">This</a> is <strong>not</strong> a real link.
         It <em>is</em> however an <acronym title="acronym">accr</acronym>.
-        Here, have piece of <code>code</code>. And two lists. 
+        Here, have piece of <code>code</code>. And two lists.
 
-        This is list one: 
+        This is list one:
         <ul>
             <li>Item 1</li>
             <li>Item 2</li>
         </ul>
 
-        This is list two: 
+        This is list two:
         <ol>
             <li>Item 1</li>
             <li>Item 2</li>
@@ -49,8 +49,8 @@ class MarkdownifyTestCase(SimpleTestCase):
 
         This paragraph has some inline styling.
 
-        In this paragraph, protocols are being tested. 
-        <a href="http://httplink.com">http-link</a>, 
+        In this paragraph, protocols are being tested.
+        <a href="http://httplink.com">http-link</a>,
         <a href="https://httpslink.com">https-link</a>,
         <a href="mailto:somebody@example.com">mailto-link</a>,
         <a>ftp-link</a>.
@@ -90,19 +90,19 @@ class MarkdownifyTestCase(SimpleTestCase):
         <p><a href="http://somelink.com">This</a> is not a real link. It is however an accr.
         Here, have piece of code. And two lists.</p>
 
-        <p>This is list one:</p> 
+        <p>This is list one:</p>
         Item 1
         Item 2
 
-        <p>This is list two:</p> 
+        <p>This is list two:</p>
         Item 1
         Item 2
 
         <p style="color: red; font-weight: 900; border: 1px solid blue;">
         This paragraph has some inline styling.</p>
 
-        <p>In this paragraph, protocols are being tested. 
-        <a href="http://httplink.com">http-link</a>, 
+        <p>In this paragraph, protocols are being tested.
+        <a href="http://httplink.com">http-link</a>,
         <a>https-link</a>,
         <a>mailto-link</a>,
         <a href="ftp://ftpserver.com">ftp-link</a>.</p>
@@ -147,8 +147,8 @@ class MarkdownifyTestCase(SimpleTestCase):
         expected_output = """
                     <p>Fenced code:
                     ~~~~~~~~~~~~~~~~~~~~{.python}
-                    def test(y):  
-                        print(y)  
+                    def test(y):
+                        print(y)
                     ~~~~~~~~~~~~~~~~~~~~</p>
                     """
 
@@ -224,7 +224,7 @@ class MarkdownifyTestCase(SimpleTestCase):
 
         expected_output = """
             <h1>Bleach</h1>
-            <p>Bleach is an allowed-list-based HTML sanitizing library that escapes or strips 
+            <p>Bleach is an allowed-list-based HTML sanitizing library that escapes or strips
             markup and attributes.</p>
             <p><a href="https://bleach.readthedocs.io/en/latest/index.html">Website</a></p>
             """
@@ -424,10 +424,10 @@ class MarkdownifyTestCase(SimpleTestCase):
         ).render(Context({"text": text}))
 
         expected_output = """
-        <h1>Some header</h1> 
-        
+        <h1>Some header</h1>
+
         Some subheader
-        
+
         Lorem ipsum
         """
 
