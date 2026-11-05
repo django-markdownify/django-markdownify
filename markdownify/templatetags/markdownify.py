@@ -1,13 +1,11 @@
 from functools import partial
 
+import bleach
+import markdown
+from bleach import css_sanitizer as cs
 from django import template
 from django.conf import settings
 from django.utils.safestring import mark_safe
-
-import markdown
-import bleach
-from bleach import css_sanitizer as cs
-
 
 register = template.Library()
 
