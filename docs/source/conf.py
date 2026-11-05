@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-#
 # Markdownify documentation build configuration file, created by
 # sphinx-quickstart on Fri Jan 19 12:58:03 2018.
 #
@@ -169,6 +166,3 @@ texinfo_documents = [
      author, 'Markdownify', 'A Django Markdown filter.',
      'Miscellaneous'),
 ]
-
-
-
