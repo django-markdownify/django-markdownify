@@ -1,3 +1,6 @@
-include LICENSE README.md
-recursive-include markdownify *.py *.md
-graft docs
+exclude .gitignore
+exclude .readthedocs.yaml
+exclude tox.ini
+prune .github
+prune docs
+prune tests

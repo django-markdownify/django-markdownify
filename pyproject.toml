@@ -1,6 +1,6 @@
 [project]
 name = "django-markdownify"
-version = "0.9.7"
+dynamic = ["version"]
 authors = [
 	{ name="Erwin Matijsen", email="erwin@erwinmatijsen.nl" },
 	{ name="Ruurd Moelker" },
@@ -26,7 +26,7 @@ homepage = "https://github.com/erwinmatijsen/django-markdownify"
 download = "https://github.com/erwinmatijsen/django-markdownify/archive/0.9.7.tar.gz"
 
 [build-system]
-requires = ["setuptools>=42"]
+requires = ["setuptools>=80", "setuptools-scm[simple]>=9.2"]
 build-backend = "setuptools.build_meta"
 
 [tool.pytest]
