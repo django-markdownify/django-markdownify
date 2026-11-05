@@ -1,10 +1,10 @@
-from django.test import SimpleTestCase, override_settings
+import os
+
 from django.conf import settings
-from django.template import Context, Template, TemplateSyntaxError
+from django.template import Context, Template
+from django.test import SimpleTestCase, override_settings
 
 from markdownify.templatetags.markdownify import markdownify
-
-import os
 
 
 class MarkdownifyTestCase(SimpleTestCase):
