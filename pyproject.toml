@@ -28,3 +28,7 @@ download = "https://github.com/erwinmatijsen/django-markdownify/archive/0.9.7.ta
 [build-system]
 requires = ["setuptools>=42"]
 build-backend = "setuptools.build_meta"
+
+[tool.pytest]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+pythonpath = ["."]
