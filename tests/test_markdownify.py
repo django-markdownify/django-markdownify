@@ -4,7 +4,7 @@ from django.conf import settings
 from django.template import Context, Template
 from django.test import SimpleTestCase, override_settings
 
-from markdownify.templatetags.markdownify import markdownify
+from django_markdownify.templatetags.markdownify import markdownify
 
 
 class MarkdownifyTestCase(SimpleTestCase):
