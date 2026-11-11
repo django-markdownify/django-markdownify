@@ -1,5 +1,5 @@
 DATABASES = {"default": {"ENGINE": "django.db.backends.sqlite3"}}
-INSTALLED_APPS = ["markdownify"]
+INSTALLED_APPS = ["django_markdownify"]
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",

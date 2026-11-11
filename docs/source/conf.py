@@ -147,7 +147,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'markdownify', 'Markdownify Documentation',
+    (master_doc, 'django_markdownify', 'Markdownify Documentation',
      [author], 1)
 ]
 

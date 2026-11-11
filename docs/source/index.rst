@@ -14,6 +14,7 @@
    Installation and usage <install_and_usage>
    Settings <settings>
    Tests <tests>
+   Upgrading to 1.0 <upgrade-1.0>
 
 Django Markdownify - A Django Markdown filter
 =============================================
